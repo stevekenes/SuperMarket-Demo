@@ -11,6 +11,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PandsMall.Data.ContextClass;
+using PandsMall.Data.Repository;
+using PandsMall.Data.Repository.Interface;
 
 namespace PandsMall
 {
@@ -35,6 +37,8 @@ namespace PandsMall
 
             services.AddDbContext<PandsContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("PandsConnection")));
+
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

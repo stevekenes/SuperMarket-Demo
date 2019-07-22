@@ -1,0 +1,24 @@
+﻿@model Category
+
+<div class="col-sm-4 col-lg-4 col-md-4">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <p>@Model.Name</p>
+        </div>
+        <div class="panel-body">
+            <h2>Products: @Model.Products</h2>
+            <div class="btn-group">
+                @if (Model.Products == null)
+                {
+                    <a class="btn btn-default" asp-area="">View product list</a>
+                }
+                else
+                {
+                    <a class="btn btn-info" asp-area="" asp-controller="product" asp-action="List" asp-route-authorId="@Model.Id">View product list</a>
+                }
+                <a class="btn btn-info" asp-area="" asp-controller="Category" asp-action="Update" asp-route-id="@Model.Id">Edit</a>
+                <a class="btn btn-danger" asp-area="" asp-controller="Category" asp-action="Delete" asp-route-id="@Model.">Delete</a>
+            </div>
+        </div>
+    </div>
+</div>

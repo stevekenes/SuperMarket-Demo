@@ -39,36 +39,36 @@ namespace PandsMall.Migrations
                         new
                         {
                             Id = 1,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(416),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(430),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6778),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6796),
                             Name = "Toiletries"
                         },
                         new
                         {
                             Id = 2,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(452),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(452),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6823),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6828),
                             Name = "Fruits"
                         },
                         new
                         {
                             Id = 3,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(457),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(457),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6828),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6833),
                             Name = "Drinks"
                         },
                         new
                         {
                             Id = 4,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(461),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(461),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6833),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6833),
                             Name = "Kitchen"
                         },
                         new
                         {
                             Id = 5,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(461),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 542, DateTimeKind.Local).AddTicks(466),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6837),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 419, DateTimeKind.Local).AddTicks(6837),
                             Name = "Bakeries"
                         });
                 });
@@ -91,8 +91,6 @@ namespace PandsMall.Migrations
 
                     b.Property<short>("QuantityInPackage");
 
-                    b.Property<byte>("UnitOfMeasurement");
-
                     b.HasKey("Id");
 
                     b.HasIndex("CategoryId");
@@ -104,56 +102,51 @@ namespace PandsMall.Migrations
                         {
                             Id = 1,
                             CategoryId = 1,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 509, DateTimeKind.Local).AddTicks(3588),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 540, DateTimeKind.Local).AddTicks(2289),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 415, DateTimeKind.Local).AddTicks(4722),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 417, DateTimeKind.Local).AddTicks(4992),
                             Name = "Delta Soap",
                             Price = 750.0,
-                            QuantityInPackage = (short)6,
-                            UnitOfMeasurement = (byte)3
+                            QuantityInPackage = (short)6
                         },
                         new
                         {
                             Id = 2,
                             CategoryId = 2,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 540, DateTimeKind.Local).AddTicks(3489),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 540, DateTimeKind.Local).AddTicks(3503),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 417, DateTimeKind.Local).AddTicks(6346),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 417, DateTimeKind.Local).AddTicks(6364),
                             Name = "Apple",
                             Price = 500.0,
-                            QuantityInPackage = (short)6,
-                            UnitOfMeasurement = (byte)3
+                            QuantityInPackage = (short)6
                         },
                         new
                         {
                             Id = 3,
                             CategoryId = 3,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 540, DateTimeKind.Local).AddTicks(3516),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 540, DateTimeKind.Local).AddTicks(3521),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 417, DateTimeKind.Local).AddTicks(6378),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 417, DateTimeKind.Local).AddTicks(6378),
                             Name = "Pepsi",
                             Price = 1500.0,
-                            QuantityInPackage = (short)12,
-                            UnitOfMeasurement = (byte)5
+                            QuantityInPackage = (short)12
                         },
                         new
                         {
                             Id = 4,
                             CategoryId = 4,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 540, DateTimeKind.Local).AddTicks(3521),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 540, DateTimeKind.Local).AddTicks(3525),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 417, DateTimeKind.Local).AddTicks(6382),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 417, DateTimeKind.Local).AddTicks(6382),
                             Name = "Gas Cooker",
                             Price = 3000.0,
-                            QuantityInPackage = (short)1,
-                            UnitOfMeasurement = (byte)4
+                            QuantityInPackage = (short)1
                         },
                         new
                         {
                             Id = 5,
                             CategoryId = 5,
-                            DateCreated = new DateTime(2019, 7, 22, 11, 8, 42, 540, DateTimeKind.Local).AddTicks(3525),
-                            DateUpdated = new DateTime(2019, 7, 22, 11, 8, 42, 540, DateTimeKind.Local).AddTicks(3530),
+                            DateCreated = new DateTime(2019, 7, 22, 11, 33, 15, 417, DateTimeKind.Local).AddTicks(6387),
+                            DateUpdated = new DateTime(2019, 7, 22, 11, 33, 15, 417, DateTimeKind.Local).AddTicks(6387),
                             Name = "Meat Pie",
                             Price = 300.0,
-                            QuantityInPackage = (short)1,
-                            UnitOfMeasurement = (byte)3
+                            QuantityInPackage = (short)1
                         });
                 });
 

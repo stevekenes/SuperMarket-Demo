@@ -14,11 +14,11 @@ namespace PandsMall.Data.ContextClass
             builder.Entity<Product>().HasData(
                 new Product[]
                 {
-                    new Product{ Id = 1, Name = "Delta Soap", QuantityInPackage = 6, UnitOfMeasurement = EUnitOfMeasurement.Gram, CategoryId = 1, Price = 750, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
-                    new Product{ Id = 2, Name = "Apple", QuantityInPackage = 6, UnitOfMeasurement = EUnitOfMeasurement.Gram, CategoryId = 2, Price = 500, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
-                    new Product{ Id = 3, Name = "Pepsi", QuantityInPackage = 12, UnitOfMeasurement = EUnitOfMeasurement.Litre, CategoryId = 3, Price = 1500, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
-                    new Product{ Id = 4, Name = "Gas Cooker", QuantityInPackage = 1, UnitOfMeasurement = EUnitOfMeasurement.Kilogram, CategoryId = 4, Price = 3000, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
-                    new Product{ Id = 5, Name = "Meat Pie", QuantityInPackage = 1, UnitOfMeasurement = EUnitOfMeasurement.Gram, CategoryId = 5, Price = 300, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
+                    new Product{ Id = 1, Name = "Delta Soap", QuantityInPackage = 6, CategoryId = 1, Price = 750, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
+                    new Product{ Id = 2, Name = "Apple", QuantityInPackage = 6, CategoryId = 2, Price = 500, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
+                    new Product{ Id = 3, Name = "Pepsi", QuantityInPackage = 12, CategoryId = 3, Price = 1500, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
+                    new Product{ Id = 4, Name = "Gas Cooker", QuantityInPackage = 1, CategoryId = 4, Price = 3000, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
+                    new Product{ Id = 5, Name = "Meat Pie", QuantityInPackage = 1, CategoryId = 5, Price = 300, DateCreated = DateTime.Now, DateUpdated = DateTime.Now},
                 });
         }
 
