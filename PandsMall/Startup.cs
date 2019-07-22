@@ -39,6 +39,7 @@ namespace PandsMall
             options.UseSqlServer(Configuration.GetConnectionString("PandsConnection")));
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }

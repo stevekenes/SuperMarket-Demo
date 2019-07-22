@@ -8,5 +8,8 @@ namespace PandsMall.Data.Repository.Interface
 {
     public interface IProductRepository : IRepository<Product>
     {
+        IEnumerable<Product> GetAllWithCategory();
+        IEnumerable<Product> FindWithCategory(Func<Product, bool> predicate);
+       
     }
 }
