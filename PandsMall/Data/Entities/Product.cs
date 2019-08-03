@@ -10,7 +10,11 @@ namespace PandsMall.Data.Entities
         public short QuantityInPackage { get; set; }
         public double Price { get; set; }
 
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
         public int CategoryId { get; set; }
+
+       
+
+
     }
 }

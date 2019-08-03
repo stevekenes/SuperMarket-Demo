@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PandsMall.Data.Entities;
 using PandsMall.Data.Repository.Interface;
 using PandsMall.Domain.ViewModels;
@@ -19,6 +20,7 @@ namespace PandsMall.Controllers
         }
 
         [Route("Category")]
+        [AllowAnonymous]
         public IActionResult List()
         {
             if (!_categoryRepository.Any()) return View("Empty");
@@ -28,18 +30,20 @@ namespace PandsMall.Controllers
             return View(categories);
         }
 
-        public IActionResult CategoryDetail()
+        [AllowAnonymous]
+        public IActionResult CategoryDetail(int id)
         {
-            var categories = _categoryRepository.GetAllWithProducts();
+            var category = _categoryRepository.GetWithProducts(id);
 
-            if (categories?.ToList().Count == 0)
-            {
-                return View("Empty");
-            }
+            //if (category.Products == null)
+            //{
+            //    return View("Empty");
+            //}
 
-            return View(categories);
+            return View(category);
         }
 
+        [AllowAnonymous]
         public IActionResult Detail(int id)
         {
             var category = _categoryRepository.GetById(id);

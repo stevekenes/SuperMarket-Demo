@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PandsMall.Data.Entities;
 using PandsMall.Data.Repository.Interface;
 using PandsMall.Domain.ViewModels;
@@ -20,6 +21,7 @@ namespace PandsMall.Controllers
         }
 
         [Route("Product")]
+        [AllowAnonymous]
         public IActionResult List(int? categoryId)
         {
 
@@ -47,6 +49,7 @@ namespace PandsMall.Controllers
             return CheckProductsCount(products);
         }
 
+        [AllowAnonymous]
         private IActionResult CheckProductsCount(IEnumerable<Product> products)
         {
             if (products == null || products.ToList().Count == 0)

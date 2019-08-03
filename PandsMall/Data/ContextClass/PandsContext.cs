@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using PandsMall.Data.Entities;
 using System;
 using System.Collections.Generic;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace PandsMall.Data.ContextClass
 {
-    public class PandsContext : DbContext
+    public class PandsContext : IdentityDbContext
     {
         public PandsContext(DbContextOptions<PandsContext> options) : base(options){}
 
@@ -16,6 +17,7 @@ namespace PandsMall.Data.ContextClass
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
+            base.OnModelCreating(builder);
             builder.SeedProductData();
             builder.SeedCategoryData();
         }

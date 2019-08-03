@@ -1,8 +1,54 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model HomeViewModel
+@{
+    int availableProducts = Model.ProductsCount;
 }
+   
+        <div class="container text-center">
+            <h1>Welcome to Pands Shopping Mall</h1>
+            <h2>Your satisfaction is our priority</h2>
+        </div>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" >
+                        Categories Count
+                    </div>
+                    <div class="panel-body">
+                        <b>There are @Model.CategoriesCount categories</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading" >
+                        Products Count
+                    </div>
+                    <div class="panel-body">
+                        <b>There are @Model.ProductsCount products</b>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-offset-3">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <b>Products Available</b>
+                    </div>
+                    <div class="panel-body">
+                        <b>There are @availableProducts products available out of @Model.ProductsCount products</b>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="container text-center">
+            <div>
+                <a class="btn btn-success mt-5" style="margin: 10px" asp-controller="Account" asp-action="Register">Register</a>
+
+            </div>
+        </div>
+       
+       
+ 
+
+

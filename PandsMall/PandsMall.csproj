@@ -10,10 +10,17 @@
     <Compile Remove="Migrations\20190721092322_InitialMigration.Designer.cs" />
     <Compile Remove="Migrations\20190722103135_Migrations.cs" />
     <Compile Remove="Migrations\20190722103135_Migrations.Designer.cs" />
+    <Compile Remove="Migrations\20190723220847_CustomerEntity.cs" />
+    <Compile Remove="Migrations\20190723220847_CustomerEntity.Designer.cs" />
+    <Compile Remove="Migrations\20190723222120_CustomerEntity2.cs" />
+    <Compile Remove="Migrations\20190723222120_CustomerEntity2.Designer.cs" />
+    <Compile Remove="Migrations\20190723224141_CustomerEntity2.cs" />
+    <Compile Remove="Migrations\20190723224141_CustomerEntity2.Designer.cs" />
   </ItemGroup>
 
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.2.6" />
@@ -22,6 +29,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
   </ItemGroup>
 
 </Project>

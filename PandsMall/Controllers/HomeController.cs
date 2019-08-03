@@ -3,27 +3,37 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PandsMall.Data.Repository.Interface;
+using PandsMall.Domain.ViewModels;
 using PandsMall.Models;
 
 namespace PandsMall.Controllers
 {
+    [AllowAnonymous]
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private readonly ICategoryRepository _categoryRepository;
+        private readonly IProductRepository _productRepository;
+
+        public HomeController(ICategoryRepository categoryRepository,
+            IProductRepository productRepository)
         {
-            return View();
+            _categoryRepository = categoryRepository;
+            _productRepository = productRepository;
         }
 
-        public IActionResult Privacy()
+        
+         public IActionResult Index()
         {
-            return View();
-        }
+            var homeVM = new HomeViewModel
+            {
+                CategoriesCount = _categoryRepository.Count(x => true),
+                ProductsCount = _productRepository.Count(x => true)
+            };
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View(homeVM);
         }
     }
 }
